@@ -10,7 +10,7 @@ public class Circle extends Shape {
     // Constructor
     public Circle(String warna, double radius) {
         // TODO: Call super dengan nama "Circle"
-        super("Circle", "Putih");
+        super("Circle", warna);
         // TODO: Set radius
         this.radius = radius;
     }
@@ -19,7 +19,6 @@ public class Circle extends Shape {
     @Override
     public double hitungLuas() {
         // TODO: Return PI * radius * radius
-        System.out.println("Menghitung luas lingkaran");
         return PI * radius * radius;
     }
 
@@ -27,7 +26,6 @@ public class Circle extends Shape {
     @Override
     public double hitungKeliling() {
         // TODO: Return 2 * PI * radius
-        System.out.println("Menghitung keliling lingkaran");
         return 2 * PI * radius;
     }
 
@@ -35,7 +33,7 @@ public class Circle extends Shape {
     @Override
     public void scale(double factor) {
         // TODO: Multiply radius by factor
-        System.out.println("Penskalaan radius: " + radius * factor);
+        radius *= factor;
     }
 
     // Getter

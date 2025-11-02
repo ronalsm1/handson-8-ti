@@ -1,5 +1,8 @@
 package latihan5;
 
+import java.text.NumberFormat;
+import java.util.*;
+
 public class Employee {
     // Properties
     protected String name;
@@ -31,13 +34,16 @@ public class Employee {
         // TODO: Print employee info
         System.out.println("--- Employee Info ---");
         System.out.println("Nama: " + name);
-        System.out.println("ID Employee: " + employeeId);
+        System.out.println("ID: " + employeeId);
         System.out.println("Department: " + department);
     }
 
     // Method generate payslip
     public void generatePayslip() {
+        NumberFormat iniRupiah = NumberFormat.getCurrencyInstance(new Locale("id", "ID"));
         // TODO: Generate dan print payslip
+        System.out.println("=== Payslip ===");
+        System.out.println("Name: " + name);
     }
 
     // Getters

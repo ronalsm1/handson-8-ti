@@ -4,7 +4,8 @@ public class Square extends Rectangle {
     // Constructor - hanya butuh sisi
     public Square(String warna, double sisi) {
         // TODO: Call super dengan panjang = lebar = sisi
-        super("Square", sisi, sisi);
+        super(warna, sisi, sisi);
+        this.nama = "Square";
     }
 
     // Override untuk memastikan selalu square
@@ -17,11 +18,7 @@ public class Square extends Rectangle {
     @Override
     public void displayInfo() {
         // TODO: Display as Square bukan Rectangle
-        System.out.println("Sisi persegi: " + getSisi());
-    }
-
-    public double getSisi() {
-        return this.panjang;
+        super.displayInfo();
     }
 }
 

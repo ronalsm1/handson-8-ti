@@ -12,7 +12,7 @@ public class Triangle extends Shape {
     public Triangle(String warna, double base, double height,
                     double sideA, double sideB, double sideC) {
         // TODO: Implementasi
-        super("Triangle", "Merah");
+        super("Triangle", warna);
         this.base = base;
         this.height = height;
         this.sideA = sideA;
@@ -24,7 +24,6 @@ public class Triangle extends Shape {
     @Override
     public double hitungLuas() {
         // TODO: Return 0.5 * base * height
-        System.out.println("Menghitung luas segitiga");
         return 0.5 * base * height;
     }
 
@@ -32,7 +31,6 @@ public class Triangle extends Shape {
     @Override
     public double hitungKeliling() {
         // TODO: Return sideA + sideB + sideC
-        System.out.println("Menghitung keliling segitiga");
         return sideA + sideB + sideC;
     }
 
@@ -40,11 +38,11 @@ public class Triangle extends Shape {
     @Override
     public void scale(double factor) {
         // TODO: Scale all dimensions
-        System.out.println("Penskalaan base: " + base * factor);
-        System.out.println("Penskalaan height: " + height * factor);
-        System.out.println("Penskalaan sideA: " + sideA * factor);
-        System.out.println("Penskalaan sideB: " + sideB * factor);
-        System.out.println("Penskalaan sideC: " + sideC * factor);
+        base *= factor;
+        height *= factor;
+        sideA *= factor;
+        sideB *= factor;
+        sideC *= factor;
     }
 }
 

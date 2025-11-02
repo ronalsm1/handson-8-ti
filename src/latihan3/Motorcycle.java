@@ -19,16 +19,21 @@ public class Motorcycle extends Vehicle {
     @Override
     public void displayInfo() {
         // TODO: Implementasi
+        System.out.println("\n--- Info Motor ---");
         super.displayInfo();
         System.out.println("Jenis Motor: " + jenisMotor);
-        System.out.println("Kapasitas Mesin: " + kapasitasMesin);
+        System.out.println("Kapasitas Mesin: " + kapasitasMesin + " CC");
     }
 
     // Override biaya rental (Motor lebih murah)
     @Override
     public double hitungBiayaRental(int jumlahHari) {
         // TODO: Implementasi
-        return 0;
+        return super.hitungBiayaRental(jumlahHari);
+    }
+
+    public String getJenisMotor() {
+        return jenisMotor;
     }
 }
 

@@ -26,11 +26,7 @@ public class Shape {
     // Method display info
     public void displayInfo() {
         // TODO: Print nama, warna, luas, keliling
-        System.out.println("--- Info Bentuk ---");
-        System.out.println("Nama: " + nama);
-        System.out.println("Warna: " + warna);
-        System.out.println("Luas: " + hitungLuas());
-        System.out.println("Keliling: " + hitungKeliling());
+        System.out.printf("%s (%s): Luas = %.2f, Keliling = %.2f%n", nama, warna, hitungLuas(), hitungKeliling());
     }
 
     // Method untuk scale shape

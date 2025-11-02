@@ -8,7 +8,7 @@ public class Rectangle extends Shape {
     // Constructor
     public Rectangle(String warna, double panjang, double lebar) {
         // TODO: Implementasi
-        super("Rectangle", "Biru");
+        super("Rectangle", warna);
         this.panjang = panjang;
         this.lebar = lebar;
     }
@@ -17,7 +17,6 @@ public class Rectangle extends Shape {
     @Override
     public double hitungLuas() {
         // TODO: Return panjang * lebar
-        System.out.println("Menghitung luas persegi panjang");
         return panjang * lebar;
     }
 
@@ -25,7 +24,6 @@ public class Rectangle extends Shape {
     @Override
     public double hitungKeliling() {
         // TODO: Return 2 * (panjang + lebar)
-        System.out.println("Menghitung keliling persegi panjang");
         return 2 * (panjang + lebar);
     }
 
@@ -33,8 +31,8 @@ public class Rectangle extends Shape {
     @Override
     public void scale(double factor) {
         // TODO: Multiply both dimensions by factor
-        System.out.println("Penskalaan panjang: " + panjang * factor);
-        System.out.println("Penskalaan lebar: " + lebar * factor);
+        panjang *= factor;
+        lebar *= factor;
     }
 }
 
